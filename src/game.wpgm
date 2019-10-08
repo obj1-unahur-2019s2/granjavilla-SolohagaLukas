@@ -1,6 +1,8 @@
 import wollok.game.*
 import hector.*
 import cultivos.*
+import oso.*
+import juego.*
 
 program farmville {
 	//  CONFIG	
@@ -9,7 +11,7 @@ program farmville {
 	game.width(10)
 	game.ground("ground.png")
 
-	//  VISUALES
+	/*//  VISUALES
 	// el "Character" le da movimiento con las teclas
  	game.addVisualCharacter(hector)
  	game.addVisualCharacter(oso)
@@ -30,8 +32,20 @@ program farmville {
 //	keyboard.left().onPressDo({ hector.moveteALaIzquierda() })
  	
  	//COLISIONES
- 	game.whenCollideDo(oso, { objeto => objeto.teChocoElOso() })
- 		
+ 	game.whenCollideDo(oso, { objeto => objeto.teChocoElOso() })*/
+ 	
+ 	
+ 	
+ 	//VISUALES
+ 	juegoGranja.configurarPersonajes()
+ 	
+ 	//CONTROL DEL TECLADO
+ 	juegoGranja.configurarTeclado()
+ 	
+ 	//COLISIONES
+ 	juegoGranja.configurarColisiones()
+ 	juegoGranja.configurarAcciones()	
+ 	
  	//  COMIENZA
 	game.start()
 }
